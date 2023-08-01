@@ -1,0 +1,140 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: darkgray;
+}
+
+.container{
+    width: 80%;
+    height: 650px;
+    margin: 20px auto;
+    border: 1px solid transparent;
+}
+
+.calc{
+    width: 340px;
+    height: 550px;
+    margin: 20px auto;
+    /* border: 1px solid black; */
+    border-radius: 30px;
+}
+
+.screen{
+    width: 340px;
+    height: 169px;
+    border-bottom: 1px solid black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: black;
+    /* margin: auto; */
+}
+
+.res{
+    width: 80%;
+    height: 100px;    
+    margin: 0px 30px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.track{
+    width: 80%;
+    height: 70px; 
+    margin: 0px 30px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons{
+    width: 340px;
+    height: 380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(41, 41, 41);
+}
+
+.boto{
+    width: 55px;
+    height: 55px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+.igual{
+    grid-row: 5 / 6;
+    grid-column: 4 / 5;
+}
+
+.num, .dec{
+    color: rgb(165, 165, 165);
+    background-color: rgb(41, 41, 41);
+    font-size: 30px;
+}
+
+.op{
+    color: white;
+    background-color: black;
+
+}
+
+.div, .mult, .sub, .add, .igual{font-size: 30px;}
+
+.boto:active{
+    animation-name: click;
+    animation-duration: 300ms;
+}
+
+@keyframes click {
+
+    0%{
+        border-top: 3px solid black;
+    }
+    25%{
+        /* border-top: none; */
+        border-right: 3px solid black;
+    }
+    50%{
+        /* border-right: none; */
+        border-bottom: 3px solid black;
+    }
+    75%{
+        /* border-bottom: none; */
+        border-left: 3px solid black;
+    }
+    100%{
+        /* border-left: none; */
+    }
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
